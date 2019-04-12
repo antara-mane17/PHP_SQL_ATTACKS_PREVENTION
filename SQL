@@ -1,0 +1,7 @@
+SQL injection is a hacking technique that was discovered more than fifteen years ago and is still proving to be devastatingly effective today, remaining a top database security priority. It was used in the run-up to the 2016 U.S. presidential election to compromise the personal data of 200,000 Illinois voters, as well as in high-profile attacks against organizations such as Sony Pictures, PBS, Microsoft, Yahoo, Heartland Payment Systems, and even the CIA.
+
+SQL, or Structured Query Language, is the command-and-control language for relational databases such as Microsoft SQL Server, Oracle, and MySQL. In modern web development, these databases are often used on the back end of web applications and content management systems written in PHP, ASP.NET or other scripting languages – meaning that both the content and behavior of many websites is built on data in a database server.
+
+See our picks for top database security tools to help protect your company from SQL injection attacks
+
+A successful attack on the database that drives a website or web application, such as a SQL injection login bypass attack, can potentially give a hacker a broad range of powers, from modifying web site content ("defacing") to capturing sensitive information such as account credentials or internal business data. A SQL injection commands list is essentially the same as a list of database commands, include potentially catastrophic ones such as DROP TABLE.
