@@ -1,0 +1,21 @@
+Security testing of web applications against SQL Injection
+Security testing of web applications explained with simple examples:
+Since the consequences of allowing this vulnerability technique could be severe, it follows that this attack should be tested during the security testing of an application. Now with an overview of this technique, let us understand a few practical examples of SQL injection.
+Important: This SQL Injection Test should be tested only in the test environment.
+If the application has a login page, it is possible that the application uses a dynamic SQL such as the statement below. This statement is expected to return at least a single row with the user details from the Users table as the result set when there is a row with the username and password entered in the SQL statement.
+SELECT * FROM Users WHERE User_Name = ‘” & strUserName & “‘ AND Password = ‘” & strPassword & “’;”
+If the tester would enter John as the strUserName (in the textbox for username) and Smith as strPassword (in the textbox for password), the above SQL statement would become:
+SELECT * FROM Users WHERE User_Name = ‘John’ AND Password = ‘Smith’;
+If the tester would enter John’– as strUserName and no strPassword, the SQL statement would become:
+SELECT * FROM Users WHERE User_Name = ‘John’– AND Password = ‘Smith’;
+Note that the part of the SQL statement after John is turned into a comment. If there were any user with the username of John in the Users table, the application could allow the tester to log in as the user John. The tester could now view the private information of the user John.
+What if the tester does not know the name of any existing user of the application? In such a case, the tester could try common usernames like admin, administrator, and sysadmin. If none of these users exists in the database, the tester could enter John’ or ‘x’=’x as strUserName and Smith’ or ‘x’=’x  as strPassword. This would cause the SQL statement to become like the one below.
+SELECT * FROM Users WHERE User_Name = ‘John’ or ‘x’=’x’ AND Password = ‘Smith’ or ‘x’=’x’;
+Since ‘x’=’x’ condition is always true, the result set would consist of all the rows in the Users table. The application could allow the tester to log in as the first user in the Users table.
+Important: The tester should request the database administrator or the developer to copy the table in question before attempting the following attacks.
+If the tester would enter John’; DROP table users_details;’—as strUserName and anything as strPassword, the SQL statement would become like the one below.
+SELECT * FROM Users WHERE User_Name = ‘John’; DROP table users_details;’ –‘ AND Password = ‘Smith’;
+This statement could cause the table “users_details” to be permanently deleted from the database.
+Though the above examples deal with using the SQL injection technique only the login page, the tester should test this technique on all the pages of the application that accept user input in textual format e.g. search pages, feedback pages etc.
+SQL injection might be possible in applications that use SSL. Even a firewall might not be able to protect the application against this technique.
+I have tried to explain this attack technique in a simple form. I would like to re-iterate this attack should be tested only in a test environment and not in the development environment, production environment or any other environment. Instead of manually testing whether the application is vulnerable to SQL attack or not, one could use a web vulnerability scanner that checks for this vulnerability.
