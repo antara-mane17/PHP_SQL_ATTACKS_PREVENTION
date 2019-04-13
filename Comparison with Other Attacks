@@ -1,0 +1,4 @@
+Comparison with Other Attacks
+SQL Injection can be considered as one of most serious attacks, as it influences the database and can make serious damage to your data and the whole system.
+For sure it can have more serious consequences than a Javascript Injection or HTML Injection, as both of them are performed on the client side. For comparison, with this attack, you can have access to the whole database.
+It should be mentioned, that to test against this attack, you should have quite good knowledge of SQL programming language and in general, you should know how databases queries are working. Also while performing this injection attack you should be more careful and observant, as any inaccuracy can be left as SQL vulnerabilities.
