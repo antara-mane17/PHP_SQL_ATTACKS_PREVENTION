@@ -1,0 +1,16 @@
+Risks of SQL Injection
+Nowadays, a database is being used for almost all the systems and websites, as data should be stored somewhere.
+As the sensitive data is being stored in the database, there are more risks involved for the system’s security. If any personal website or blog’s data would be stolen, then there won’t be much damage when compared to the data that would be stolen from the banking system.
+The main purpose of this attack is to hack the system’s database, therefore this attack’s consequences can really be harmful.
+The following things might result from SQL injection:
+Hacking other person’s account.
+Stealing and copying website’s or system’s sensitive data.
+Changing system’s sensitive data.
+Deleting system’s sensitive data.
+The user could log in to the application as another user, even as an administrator.
+The user could view private information belonging to other users e.g. details of other users’ profiles, their transaction details etc.
+The user could change application configuration information and the data of the other users.
+The user could modify the structure of the database; even delete tables in the application database.
+The user could take control of the database server and execute commands on it at will.
+The above-listed risks can really be considered serious, as restoring database or its data can cost a lot. It can cost your company a reputation and money to restore the lost data and system. Therefore it is highly recommended to protect your system against this type of attack and consider security testing as a good investment in your product’s and company’s reputation.
+As a tester, I would like to comment, that testing against possible attacks is a good practice even if security testing was not planned. This way you can protect and test the product against unexpected cases and malicious users.
