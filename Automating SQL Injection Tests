@@ -1,0 +1,6 @@
+Automating SQL Injection Tests
+As some tested systems or websites can be quite complicated and contain sensitive data, testing manually can be really difficult and it takes a lot of time too. Therefore testing against this attack with special tools can be really helpful at times.
+One such SQL Injection tool is SOAP UI. If we have automated regression tests at the API level, we can also switch checking against this attack using this tool. In SOAP UI tool there are already prepared code templates for checking against this attack. Those templates can also be supplemented by your own written code.
+It is a quite reliable tool.
+However, a test should already be automated at the API level, what is not that easy. Another possible way to test automatically is using various browser plugins.
+It should be mentioned, that even if automated tools save your time, they are not always considered to be very reliable. If we are testing a banking system or any website with very sensitive data, it is highly recommended to test it manually. Where you can see the exact results and analyze it. Also, in this case, we can be sure, that nothing was skipped.
