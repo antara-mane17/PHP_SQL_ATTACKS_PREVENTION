@@ -1,0 +1,11 @@
+Vulnerable Parts of this attack
+Before starting the testing process, every sincere tester should more or less know which parts would be most vulnerable to possible this attack.
+It is also a good practice to plan which field of the system is to be tested exactly and in what order. In my testing career, I have learned, that it is not a good idea to test fields against SQL attack randomly as some fields can be missed.
+As this attack is being performed in the database, all data entry system parts, input fields, and website‘s links are vulnerable.
+Vulnerable parts include:
+Login fields
+Search fields
+Comment fields
+Any other data entry and saving fields
+Website‘s links
+It is important to notice that while testing against this attack it is not enough to check only one or a few fields. It is quite common, that one field may be protected against SQL Injection, but then another does not. Therefore it is important not to forget to test all the website’s fields.
