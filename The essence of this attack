@@ -1,0 +1,5 @@
+The essence of this attack
+As mentioned earlier, the essence of this attack is to hack the database with malicious purpose.
+In order to perform this ecurity testing, initially, you need to find the vulnerable system parts and then send malicious SQL code through them to the database. If this attack is possible for a system, then appropriate malicious SQL code will be sent and harmful actions may be performed in the database.
+Each and every field of a website is like a gate to the database. Any data or input that we usually enter in any field of the system or website goes to the database query. Therefore, instead of correct data, if we would type any malicious code, then it may be executed in the database query and bring harmful consequences.
+For performing this attack, we have to change the act and purpose of an appropriate database query. One of the possible methods to perform it is to make the query always true and after that insert your malicious code. Changing the database query to always true can be performed with a simple code like ‘ or 1=1;–.
